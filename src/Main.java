@@ -22,7 +22,7 @@ public class Main {
         // You can play with these 2 options as well
 //        Manager rm = new RestManager(tables, true, new SpinOnWait());
 //        Manager rm = new RestManager(tables, true, new YieldOnWait());
-//
+
         Manager rm = new RestManager(tables, true, new NoneOnWait());
 
         var cg = ClientsGroup.ofCurrentTime(1);
@@ -139,12 +139,12 @@ public class Main {
         assert rm.getSeatCount() == 3; // cg2
         assert rm.lookup(cg) == null
                 && rm.lookup(cg1) == null
-                && rm.lookup(cg2) != null // cg2 is still seated, cg2 likes to eat slowly, we will leave them there
+                && rm.lookup(cg2) != null // cg2 is still seated
                 && rm.lookup(cg3) == null
                 && rm.lookup(cg4) == null
                 && rm.lookup(cg5) == null;
 
-        System.out.println("Congratulations! All tests passed!");
+        System.out.println("All tests passed!");
 
         // to check if the assertion is enabled (-ea VM option)
         assert 0 == 1 : "Assertions are enabled!";

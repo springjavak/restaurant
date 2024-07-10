@@ -3,7 +3,7 @@ package com.restaurant;
 public final class SpinOnWait extends ActionOnWait {
 
     @Override
-    public void actOnWait() {
+    public void doOnWait() {
         Thread.onSpinWait();
     }
 

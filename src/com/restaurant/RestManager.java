@@ -182,7 +182,7 @@ public class RestManager implements Manager {
         private void loopOverClientGroupQueue() {
             while (true) {
                 while (this.clientGroupQueue.isEmpty()) {
-                    Optional.ofNullable(this.actionOnWait).ifPresent(ActionOnWait::actOnWait);
+                    Optional.ofNullable(this.actionOnWait).ifPresent(ActionOnWait::doOnWait);
                 }
                 this.clientGroupQueue.removeIf(this::tryTakeSeat);
             }

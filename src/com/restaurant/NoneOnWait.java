@@ -3,7 +3,7 @@ package com.restaurant;
 public final class NoneOnWait extends ActionOnWait {
 
     @Override
-    public void actOnWait() {
+    public void doOnWait() {
         // Do nothing
     }
 
