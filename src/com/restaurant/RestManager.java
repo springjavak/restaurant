@@ -7,8 +7,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Queue;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicMarkableReference;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 import java.util.stream.IntStream;
@@ -66,6 +67,7 @@ public class RestManager implements Manager {
 
     abstract static class RestaurantManager implements Manager {
         protected final Queue<ClientsGroup> clientGroupQueue = new ConcurrentLinkedQueue<>();
+        ExecutorService executor = Executors.newSingleThreadExecutor();
         /**
          * Strategy pattern used here.
          *
@@ -118,7 +120,7 @@ public class RestManager implements Manager {
         private void conditionallyInitializeEventLoop() {
             var r = this.loopingTask.getReference();
             if (this.loopingTask.compareAndSet(null, this::loopOverClientGroupQueue, false, true)) {
-                CompletableFuture.runAsync(this.loopingTask.getReference()); // runs once and forever
+                executor.submit(this.loopingTask.getReference()); // runs once and forever
             }
         }
 
