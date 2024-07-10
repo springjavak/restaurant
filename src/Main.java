@@ -3,13 +3,12 @@ import com.restaurant.Manager;
 import com.restaurant.NoneOnWait;
 import com.restaurant.RestManager;
 import com.restaurant.Table;
-
 import java.time.Duration;
 import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+        public static void main(String[] args) throws InterruptedException {
         System.out.println("-------------------------------------------------------------------");
         System.out.println("""
                 Hello!
@@ -42,7 +41,7 @@ public class Main {
         System.out.println("Passing tests ...");
 
         // wait time for the loop not to fail. This is for testing purposes only. In reality it does its job too quickly.
-        var sleepingTime = 5_000;
+        var sleepingTime = 100;
         // cg takes a seat
         rm.onArrive(cg);
         Thread.sleep(sleepingTime);
