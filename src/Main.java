@@ -1,15 +1,11 @@
 import com.restaurant.ClientsGroup;
 import com.restaurant.Manager;
-import com.restaurant.None;
+import com.restaurant.NoneOnWait;
 import com.restaurant.RestManager;
-import com.restaurant.RestUtil;
-import com.restaurant.Spin;
 import com.restaurant.Table;
-import com.restaurant.Yield;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Main {
 
@@ -24,10 +20,10 @@ public class Main {
                 """);
         var tables = List.of(new Table(2), new Table(4));
         // You can play with these 2 options as well
-//        Manager rm = new RestManager(tables, true, new Spin());
-//        Manager rm = new RestManager(tables, true, new Yield());
+//        Manager rm = new RestManager(tables, true, new SpinOnWait());
+//        Manager rm = new RestManager(tables, true, new YieldOnWait());
 //
-        Manager rm = new RestManager(tables, true, new None());
+        Manager rm = new RestManager(tables, true, new NoneOnWait());
 
         var cg = ClientsGroup.ofCurrentTime(1);
         var cg1 = ClientsGroup.ofCurrentTime(2);

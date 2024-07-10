@@ -1,10 +1,10 @@
 package com.restaurant;
 
-public final class Spin extends ActionOnWait {
+public final class NoneOnWait extends ActionOnWait {
 
     @Override
     public void actOnWait() {
-        Thread.onSpinWait();
+        // Do nothing
     }
 
 }

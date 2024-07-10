@@ -1,6 +1,6 @@
 package com.restaurant;
 
-public final class Yield extends ActionOnWait {
+public final class YieldOnWait extends ActionOnWait {
 
     @Override
     public void actOnWait() {
