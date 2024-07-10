@@ -6,3 +6,10 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# Generated files
+out/
+
+# Java class files
+*.class
+
+*.iml
