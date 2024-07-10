@@ -16,8 +16,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("-------------------------------------------------------------------");
         System.out.println("""
-                Hello, Alto Intelligence! 
-                Greetings from Sunny Yerevan!
+                Hello!
                 Wait a little bit, please, I'm running the tests...
                 If you see a message *Assertions are enabled!*, it means all tests are passed!
                 Just in case it fails in the middle, please re-run, 
