@@ -1,4 +1,4 @@
-package com.restaurant;
+package com.restaurant.exception;
 
 public class ClientNumberException extends RuntimeException {
 

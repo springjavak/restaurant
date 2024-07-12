@@ -1,4 +1,4 @@
-package com.restaurant;
+package com.restaurant.wait;
 
 public final class SpinOnWait extends ActionOnWait {
 

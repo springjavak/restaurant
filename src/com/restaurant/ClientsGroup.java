@@ -1,5 +1,7 @@
 package com.restaurant;
 
+import com.restaurant.exception.ClientNumberException;
+
 import java.time.LocalDateTime;
 
 public record ClientsGroup(int size, LocalDateTime arrivalTime) {

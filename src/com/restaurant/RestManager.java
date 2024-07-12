@@ -1,5 +1,7 @@
 package com.restaurant;
 
+import com.restaurant.wait.ActionOnWait;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Comparator;

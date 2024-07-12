@@ -1,5 +1,7 @@
 package com.restaurant;
 
+import com.restaurant.exception.SeatNumberException;
+
 public record Table(int size) {
 
     public Table(int size) {

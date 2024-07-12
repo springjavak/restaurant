@@ -1,6 +1,6 @@
 import com.restaurant.ClientsGroup;
 import com.restaurant.Manager;
-import com.restaurant.NoneOnWait;
+import com.restaurant.wait.NoneOnWait;
 import com.restaurant.RestManager;
 import com.restaurant.Table;
 import java.time.Duration;
